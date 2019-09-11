@@ -1,0 +1,14 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block content %}
+        <form method='POST'>
+            {%csrf_token%}
+            <table align="center" bgcolor="yellow">
+            <h1><center>Registration Form</center></h1>
+       <center> {{form.as_p}}</center>
+<p><center><input type='submit' value="Register"></center></p>
+<p><center><a href="/login/">Click Here For LogIn</a></p>
+</table>
+</form>
+{% endblock %}
+    

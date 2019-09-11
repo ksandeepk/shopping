@@ -1,0 +1,15 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block content %}
+{% for d in data %}
+<form method="POST">
+    {% csrf_token %}
+<input type="text" name="pname" value={{d.product_name}}><br>
+<input type="text" name="pprice" value={{d.product_price}}><br>
+<img name="pimg" width="400" height="400" src="{{d.product_image.url}}"><br>
+
+    <input type="submit" value="Add To Cart">
+</form>
+<hr>
+{% endfor %}
+{% endblock %}

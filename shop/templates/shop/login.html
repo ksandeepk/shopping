@@ -1,0 +1,11 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block content %}
+        <form method="POST"><br><br><br><br><br><br><br><br><br>
+        <h1><center>login page</center></h1>
+        {% csrf_token %}
+        
+        <center>{{form.as_p}}</center>
+        <p><center><input type='submit' value='login'></center></p>
+    </form>
+{% endblock %}

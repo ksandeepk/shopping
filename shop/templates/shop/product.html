@@ -1,0 +1,11 @@
+
+
+<br>
+{%for s in sp%}
+<br><br>
+product_name: {{s.product_name}}<br>
+product_cost: {{s.product_price}}<br>
+product_image:<img width="300" height="300" src="{{s.product_image.url}}"><br>
+<a href="/see/{{s.id}}">Add to Cart</a><br>
+<hr>
+{%endfor%}<br><br><br><br>
